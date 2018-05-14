@@ -1,0 +1,4733 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owlapi "http://www.semanticweb.org/owlapi#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY fashion_ontology "http://master.yanenko.de/fashion_ontology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://master.yanenko.de/fashion_ontology.owl#"
+     xml:base="http://master.yanenko.de/fashion_ontology.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:fashion_ontology="http://master.yanenko.de/fashion_ontology.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owlapi="http://www.semanticweb.org/owlapi#">
+    <owl:Ontology rdf:about="http://master.yanenko.de/fashion_ontology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&owlapi;nodeID"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#covers -->
+
+    <owl:ObjectProperty rdf:about="&fashion_ontology;covers">
+        <rdfs:domain rdf:resource="&fashion_ontology;Apparel"/>
+        <rdfs:range rdf:resource="&fashion_ontology;Body"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#hasArmForm -->
+
+    <owl:ObjectProperty rdf:about="&fashion_ontology;hasArmForm">
+        <rdfs:domain rdf:resource="&fashion_ontology;Apparel"/>
+        <rdfs:range rdf:resource="&fashion_ontology;ArmForm"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#hasColor -->
+
+    <owl:ObjectProperty rdf:about="&fashion_ontology;hasColor">
+        <rdfs:range rdf:resource="&fashion_ontology;Color"/>
+        <rdfs:domain rdf:resource="&fashion_ontology;Fashion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#hasColorStyle -->
+
+    <owl:ObjectProperty rdf:about="&fashion_ontology;hasColorStyle">
+        <rdfs:range rdf:resource="&fashion_ontology;Colorstyle"/>
+        <rdfs:domain rdf:resource="&fashion_ontology;Fashion"/>
+        <rdfs:range rdf:resource="&fashion_ontology;Pattern"/>
+        <owl:propertyDisjointWith rdf:resource="&fashion_ontology;hasPattern"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#hasDetail -->
+
+    <owl:ObjectProperty rdf:about="&fashion_ontology;hasDetail">
+        <rdfs:range rdf:resource="&fashion_ontology;Detail"/>
+        <rdfs:domain rdf:resource="&fashion_ontology;Fashion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#hasNeckForm -->
+
+    <owl:ObjectProperty rdf:about="&fashion_ontology;hasNeckForm">
+        <rdfs:domain rdf:resource="&fashion_ontology;Apparel"/>
+        <rdfs:range rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#hasOrientation -->
+
+    <owl:ObjectProperty rdf:about="&fashion_ontology;hasOrientation">
+        <rdfs:domain rdf:resource="&fashion_ontology;Line"/>
+        <rdfs:range rdf:resource="&fashion_ontology;Orientation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#hasPattern -->
+
+    <owl:ObjectProperty rdf:about="&fashion_ontology;hasPattern">
+        <rdfs:domain rdf:resource="&fashion_ontology;Fashion"/>
+        <rdfs:range rdf:resource="&fashion_ontology;Pattern"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#hasSymmetry -->
+
+    <owl:ObjectProperty rdf:about="&fashion_ontology;hasSymmetry">
+        <rdfs:domain rdf:resource="&fashion_ontology;Fashion"/>
+        <rdfs:range rdf:resource="&fashion_ontology;Symmetry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#hasWidth -->
+
+    <owl:ObjectProperty rdf:about="&fashion_ontology;hasWidth">
+        <rdfs:domain rdf:resource="&fashion_ontology;Fashion"/>
+        <rdfs:range rdf:resource="&fashion_ontology;Width"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#isDesignedBy -->
+
+    <owl:ObjectProperty rdf:about="&fashion_ontology;isDesignedBy">
+        <rdfs:range rdf:resource="&fashion_ontology;Designer"/>
+        <rdfs:domain rdf:resource="&fashion_ontology;Fashion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Abdomen -->
+
+    <owl:Class rdf:about="&fashion_ontology;Abdomen">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Accessory -->
+
+    <owl:Class rdf:about="&fashion_ontology;Accessory">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Fashion"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Apparel"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Jewellery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Africa -->
+
+    <owl:Class rdf:about="&fashion_ontology;Africa">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Geometrical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#African -->
+
+    <owl:Class rdf:about="&fashion_ontology;African">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Ethnic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Androsia -->
+
+    <owl:Class rdf:about="&fashion_ontology;Androsia">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Printed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Angled -->
+
+    <owl:Class rdf:about="&fashion_ontology;Angled">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Geometric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Animalprint -->
+
+    <owl:Class rdf:about="&fashion_ontology;Animalprint">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Organic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Animals -->
+
+    <owl:Class rdf:about="&fashion_ontology;Animals">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Ankle -->
+
+    <owl:Class rdf:about="&fashion_ontology;Ankle">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Antique -->
+
+    <owl:Class rdf:about="&fashion_ontology;Antique">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Organic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Apparel -->
+
+    <owl:Class rdf:about="&fashion_ontology;Apparel">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Fashion"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Jewellery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Application -->
+
+    <owl:Class rdf:about="&fashion_ontology;Application">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Detail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Arm -->
+
+    <owl:Class rdf:about="&fashion_ontology;Arm">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#ArmForm -->
+
+    <owl:Class rdf:about="&fashion_ontology;ArmForm"/>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Army -->
+
+    <owl:Class rdf:about="&fashion_ontology;Army">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Grafics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Artificial -->
+
+    <owl:Class rdf:about="&fashion_ontology;Artificial">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Photoprint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Asian -->
+
+    <owl:Class rdf:about="&fashion_ontology;Asian">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Floral"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Azulejos -->
+
+    <owl:Class rdf:about="&fashion_ontology;Azulejos">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Geometrical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Bag -->
+
+    <owl:Class rdf:about="&fashion_ontology;Bag">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Accessory"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Hat"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Scarf"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Stole"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Sunglasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Baggy -->
+
+    <owl:Class rdf:about="&fashion_ontology;Baggy">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Ballerina -->
+
+    <owl:Class rdf:about="&fashion_ontology;Ballerina">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Slipper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Batik -->
+
+    <owl:Class rdf:about="&fashion_ontology;Batik">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Ethnic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Belt -->
+
+    <owl:Class rdf:about="&fashion_ontology;Belt">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Accessory"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Hat"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Scarf"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Stole"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Sunglasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#BermudaShorts -->
+
+    <owl:Class rdf:about="&fashion_ontology;BermudaShorts">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shorts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#BigCollar -->
+
+    <owl:Class rdf:about="&fashion_ontology;BigCollar">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Collar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#BikerJacket -->
+
+    <owl:Class rdf:about="&fashion_ontology;BikerJacket">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Jacket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Blazer -->
+
+    <owl:Class rdf:about="&fashion_ontology;Blazer">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Jacket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Blouse -->
+
+    <owl:Class rdf:about="&fashion_ontology;Blouse">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shirt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Blouson -->
+
+    <owl:Class rdf:about="&fashion_ontology;Blouson">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Jacket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body -->
+
+    <owl:Class rdf:about="&fashion_ontology;Body">
+        <owl:disjointWith rdf:resource="&fashion_ontology;Color"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Colorstyle"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Coverage"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Designer"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Detail"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Fashion"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Layer"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Material"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Orientation"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Pattern"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Symmetry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Bolero -->
+
+    <owl:Class rdf:about="&fashion_ontology;Bolero">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Cardigan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Boot -->
+
+    <owl:Class rdf:about="&fashion_ontology;Boot">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shoe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Bracelet -->
+
+    <owl:Class rdf:about="&fashion_ontology;Bracelet">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Jewellery"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Earring"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Necklace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Breast -->
+
+    <owl:Class rdf:about="&fashion_ontology;Breast">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#BroadStrap -->
+
+    <owl:Class rdf:about="&fashion_ontology;BroadStrap">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Strap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Buckle -->
+
+    <owl:Class rdf:about="&fashion_ontology;Buckle">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Detail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Burberry -->
+
+    <owl:Class rdf:about="&fashion_ontology;Burberry">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Square"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Burlington -->
+
+    <owl:Class rdf:about="&fashion_ontology;Burlington">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Rhomb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Buttons -->
+
+    <owl:Class rdf:about="&fashion_ontology;Buttons">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Closure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Calf -->
+
+    <owl:Class rdf:about="&fashion_ontology;Calf">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Camouflage -->
+
+    <owl:Class rdf:about="&fashion_ontology;Camouflage">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Army"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#CapriPants -->
+
+    <owl:Class rdf:about="&fashion_ontology;CapriPants">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shorts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Cardigan -->
+
+    <owl:Class rdf:about="&fashion_ontology;Cardigan">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Overlay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Cargo -->
+
+    <owl:Class rdf:about="&fashion_ontology;Cargo">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Carpet -->
+
+    <owl:Class rdf:about="&fashion_ontology;Carpet">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Ethnic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#CasualCollar -->
+
+    <owl:Class rdf:about="&fashion_ontology;CasualCollar">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Collar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Catsuit -->
+
+    <owl:Class rdf:about="&fashion_ontology;Catsuit">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Overall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Chinese -->
+
+    <owl:Class rdf:about="&fashion_ontology;Chinese">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Asian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Cigarette -->
+
+    <owl:Class rdf:about="&fashion_ontology;Cigarette">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Circles -->
+
+    <owl:Class rdf:about="&fashion_ontology;Circles">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Round"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Circular -->
+
+    <owl:Class rdf:about="&fashion_ontology;Circular">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Indian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Classic -->
+
+    <owl:Class rdf:about="&fashion_ontology;Classic">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Floral"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Closure -->
+
+    <owl:Class rdf:about="&fashion_ontology;Closure">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Detail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Clothing -->
+
+    <owl:Class rdf:about="&fashion_ontology;Clothing">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Apparel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Clutch -->
+
+    <owl:Class rdf:about="&fashion_ontology;Clutch">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Bag"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Coat -->
+
+    <owl:Class rdf:about="&fashion_ontology;Coat">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;OuterWare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#CocktailDress -->
+
+    <owl:Class rdf:about="&fashion_ontology;CocktailDress">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Dress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar -->
+
+    <owl:Class rdf:about="&fashion_ontology;Collar">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;NeckForm"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Neckline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Color -->
+
+    <owl:Class rdf:about="&fashion_ontology;Color">
+        <owl:disjointWith rdf:resource="&fashion_ontology;Colorstyle"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Fashion"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Layer"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Material"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Pattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Colorstyle -->
+
+    <owl:Class rdf:about="&fashion_ontology;Colorstyle">
+        <owl:disjointWith rdf:resource="&fashion_ontology;Fashion"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Layer"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Material"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Pattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Combination -->
+
+    <owl:Class rdf:about="&fashion_ontology;Combination">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Polychrome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Complex -->
+
+    <owl:Class rdf:about="&fashion_ontology;Complex">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Weaved"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Corsage -->
+
+    <owl:Class rdf:about="&fashion_ontology;Corsage">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shirt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Cotton -->
+
+    <owl:Class rdf:about="&fashion_ontology;Cotton">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Material"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Coverage -->
+
+    <owl:Class rdf:about="&fashion_ontology;Coverage"/>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Croco -->
+
+    <owl:Class rdf:about="&fashion_ontology;Croco">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Reptile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Crumpled -->
+
+    <owl:Class rdf:about="&fashion_ontology;Crumpled">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Batik"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#CurvedCollar -->
+
+    <owl:Class rdf:about="&fashion_ontology;CurvedCollar">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Collar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Cyan -->
+
+    <owl:Class rdf:about="&fashion_ontology;Cyan">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Hue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Dark -->
+
+    <owl:Class rdf:about="&fashion_ontology;Dark">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Lightness"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Light"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;MidLight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#DeepNeckline -->
+
+    <owl:Class rdf:about="&fashion_ontology;DeepNeckline">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Neckline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer -->
+
+    <owl:Class rdf:about="&fashion_ontology;Designer">
+        <owl:disjointWith rdf:resource="&fashion_ontology;Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Detail -->
+
+    <owl:Class rdf:about="&fashion_ontology;Detail">
+        <owl:disjointWith rdf:resource="&fashion_ontology;Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Dots -->
+
+    <owl:Class rdf:about="&fashion_ontology;Dots">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Round"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Drapery -->
+
+    <owl:Class rdf:about="&fashion_ontology;Drapery">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Detail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Dress -->
+
+    <owl:Class rdf:about="&fashion_ontology;Dress">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;InnerWare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Earring -->
+
+    <owl:Class rdf:about="&fashion_ontology;Earring">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Jewellery"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Necklace"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Ring"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#EdgedCollar -->
+
+    <owl:Class rdf:about="&fashion_ontology;EdgedCollar">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Collar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#EdgedNeckline -->
+
+    <owl:Class rdf:about="&fashion_ontology;EdgedNeckline">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Neckline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Ellbow -->
+
+    <owl:Class rdf:about="&fashion_ontology;Ellbow">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#EmpireDessin -->
+
+    <owl:Class rdf:about="&fashion_ontology;EmpireDessin">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Antique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Ethnic -->
+
+    <owl:Class rdf:about="&fashion_ontology;Ethnic">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#EveningDress -->
+
+    <owl:Class rdf:about="&fashion_ontology;EveningDress">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Dress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Exotic -->
+
+    <owl:Class rdf:about="&fashion_ontology;Exotic">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Tropical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#ExtravagantCollar -->
+
+    <owl:Class rdf:about="&fashion_ontology;ExtravagantCollar">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;BigCollar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Facility -->
+
+    <owl:Class rdf:about="&fashion_ontology;Facility">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Artificial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Fashion -->
+
+    <owl:Class rdf:about="&fashion_ontology;Fashion">
+        <owl:disjointWith rdf:resource="&fashion_ontology;Material"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Pattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#FirstLayer -->
+
+    <owl:Class rdf:about="&fashion_ontology;FirstLayer">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#FlipFlop -->
+
+    <owl:Class rdf:about="&fashion_ontology;FlipFlop">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Sandal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Floral -->
+
+    <owl:Class rdf:about="&fashion_ontology;Floral">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Organic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Foot -->
+
+    <owl:Class rdf:about="&fashion_ontology;Foot">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Forearm -->
+
+    <owl:Class rdf:about="&fashion_ontology;Forearm">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#FurAnimal -->
+
+    <owl:Class rdf:about="&fashion_ontology;FurAnimal">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Animalprint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#FurCoat -->
+
+    <owl:Class rdf:about="&fashion_ontology;FurCoat">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Coat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Geometric -->
+
+    <owl:Class rdf:about="&fashion_ontology;Geometric">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Geometrical -->
+
+    <owl:Class rdf:about="&fashion_ontology;Geometrical">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Carpet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Gipsy -->
+
+    <owl:Class rdf:about="&fashion_ontology;Gipsy">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Circular"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Glencheck -->
+
+    <owl:Class rdf:about="&fashion_ontology;Glencheck">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Complex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Gobelin -->
+
+    <owl:Class rdf:about="&fashion_ontology;Gobelin">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Antique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Gradient -->
+
+    <owl:Class rdf:about="&fashion_ontology;Gradient">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Polychrome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Graffiti -->
+
+    <owl:Class rdf:about="&fashion_ontology;Graffiti">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Realistic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Grafics -->
+
+    <owl:Class rdf:about="&fashion_ontology;Grafics">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Graphic -->
+
+    <owl:Class rdf:about="&fashion_ontology;Graphic">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;African"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Halter -->
+
+    <owl:Class rdf:about="&fashion_ontology;Halter">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Strap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Hat -->
+
+    <owl:Class rdf:about="&fashion_ontology;Hat">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Accessory"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Stole"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Sunglasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Hawaii -->
+
+    <owl:Class rdf:about="&fashion_ontology;Hawaii">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Tropical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Herringbone -->
+
+    <owl:Class rdf:about="&fashion_ontology;Herringbone">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Simple"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#HighNeckline -->
+
+    <owl:Class rdf:about="&fashion_ontology;HighNeckline">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Neckline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Houndstooth -->
+
+    <owl:Class rdf:about="&fashion_ontology;Houndstooth">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Complex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Hue -->
+
+    <owl:Class rdf:about="&fashion_ontology;Hue">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Color"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Inca -->
+
+    <owl:Class rdf:about="&fashion_ontology;Inca">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Geometrical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Indian -->
+
+    <owl:Class rdf:about="&fashion_ontology;Indian">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Ethnic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Indiennes -->
+
+    <owl:Class rdf:about="&fashion_ontology;Indiennes">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Twirly"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Indonesia -->
+
+    <owl:Class rdf:about="&fashion_ontology;Indonesia">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Circular"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#InnerWare -->
+
+    <owl:Class rdf:about="&fashion_ontology;InnerWare">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Clothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Jacket -->
+
+    <owl:Class rdf:about="&fashion_ontology;Jacket">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;OuterWare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Jacquard -->
+
+    <owl:Class rdf:about="&fashion_ontology;Jacquard">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Antique"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Japanese -->
+
+    <owl:Class rdf:about="&fashion_ontology;Japanese">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Asian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Jeans -->
+
+    <owl:Class rdf:about="&fashion_ontology;Jeans">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Jewellery -->
+
+    <owl:Class rdf:about="&fashion_ontology;Jewellery">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Fashion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Jumpsuit -->
+
+    <owl:Class rdf:about="&fashion_ontology;Jumpsuit">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Overall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Jungle -->
+
+    <owl:Class rdf:about="&fashion_ontology;Jungle">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Tropical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Kalahari -->
+
+    <owl:Class rdf:about="&fashion_ontology;Kalahari">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;African"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Kelim -->
+
+    <owl:Class rdf:about="&fashion_ontology;Kelim">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Geometrical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Knee -->
+
+    <owl:Class rdf:about="&fashion_ontology;Knee">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Knotted -->
+
+    <owl:Class rdf:about="&fashion_ontology;Knotted">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Crumpled"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L1 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L1">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Pelvis"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L12 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L12">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L1"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L2"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L1"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L123 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L123">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L12"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L23"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L12"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L23"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L1234 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L1234">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L123"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L234"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L123"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L234"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L12345 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L12345">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L1234"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L2345"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L1234"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L2345"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L123456 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L123456">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L12345"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L23456"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L12345"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L23456"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L2 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L2">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Thigh"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L23 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L23">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L2"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L3"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L2"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L234 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L234">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L23"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L34"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L23"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L34"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L2345 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L2345">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L234"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L345"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L234"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L345"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L23456 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L23456">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L2345"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L3456"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L2345"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L3456"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L3 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L3">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Knee"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L34 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L34">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L3"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L4"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L3"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L4"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L345 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L345">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L34"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L45"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L34"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L45"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L3456 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L3456">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L345"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L456"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L345"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L456"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L4 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L4">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Calf"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L45 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L45">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L4"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L5"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L4"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L456 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L456">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L45"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L56"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L45"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L56"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L5 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L5">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Ankle"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L56 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L56">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;L5"/>
+                    <rdf:Description rdf:about="&fashion_ontology;L6"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L5"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;L6"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#L6 -->
+
+    <owl:Class rdf:about="&fashion_ontology;L6">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Foot"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Landhaus -->
+
+    <owl:Class rdf:about="&fashion_ontology;Landhaus">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Layer -->
+
+    <owl:Class rdf:about="&fashion_ontology;Layer">
+        <owl:disjointWith rdf:resource="&fashion_ontology;Material"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Orientation"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Pattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#LeatherJacket -->
+
+    <owl:Class rdf:about="&fashion_ontology;LeatherJacket">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Jacket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#LegWear -->
+
+    <owl:Class rdf:about="&fashion_ontology;LegWear">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;InnerWare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Leggins -->
+
+    <owl:Class rdf:about="&fashion_ontology;Leggins">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Leopard -->
+
+    <owl:Class rdf:about="&fashion_ontology;Leopard">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;FurAnimal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Light -->
+
+    <owl:Class rdf:about="&fashion_ontology;Light">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Lightness"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;MidLight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Lightness -->
+
+    <owl:Class rdf:about="&fashion_ontology;Lightness">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Color"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Line -->
+
+    <owl:Class rdf:about="&fashion_ontology;Line">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Angled"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#LinearNeckline -->
+
+    <owl:Class rdf:about="&fashion_ontology;LinearNeckline">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Neckline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Loafer -->
+
+    <owl:Class rdf:about="&fashion_ontology;Loafer">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Slipper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Longsleeve -->
+
+    <owl:Class rdf:about="&fashion_ontology;Longsleeve">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shirt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#LowerCoverage -->
+
+    <owl:Class rdf:about="&fashion_ontology;LowerCoverage">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Coverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#LowerParts -->
+
+    <owl:Class rdf:about="&fashion_ontology;LowerParts">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Madras -->
+
+    <owl:Class rdf:about="&fashion_ontology;Madras">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Square"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Magenta -->
+
+    <owl:Class rdf:about="&fashion_ontology;Magenta">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Hue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#MaritimeCollar -->
+
+    <owl:Class rdf:about="&fashion_ontology;MaritimeCollar">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;BigCollar"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;CasualCollar"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;CurvedCollar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Marlene -->
+
+    <owl:Class rdf:about="&fashion_ontology;Marlene">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Marquee -->
+
+    <owl:Class rdf:about="&fashion_ontology;Marquee">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Line"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Material -->
+
+    <owl:Class rdf:about="&fashion_ontology;Material">
+        <owl:disjointWith rdf:resource="&fashion_ontology;Pattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#MidLight -->
+
+    <owl:Class rdf:about="&fashion_ontology;MidLight">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Lightness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#MidSaturated -->
+
+    <owl:Class rdf:about="&fashion_ontology;MidSaturated">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Saturation"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Saturated"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Unsaturated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Millefleurs -->
+
+    <owl:Class rdf:about="&fashion_ontology;Millefleurs">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Classic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Mocassin -->
+
+    <owl:Class rdf:about="&fashion_ontology;Mocassin">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Slipper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Mondrian -->
+
+    <owl:Class rdf:about="&fashion_ontology;Mondrian">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Square"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Monochrome -->
+
+    <owl:Class rdf:about="&fashion_ontology;Monochrome">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Colorstyle"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Polychrome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Multi -->
+
+    <owl:Class rdf:about="&fashion_ontology;Multi">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Line"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#NarrowStrap -->
+
+    <owl:Class rdf:about="&fashion_ontology;NarrowStrap">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Strap"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Natural -->
+
+    <owl:Class rdf:about="&fashion_ontology;Natural">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Photoprint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Navajo -->
+
+    <owl:Class rdf:about="&fashion_ontology;Navajo">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Geometrical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#NeckForm -->
+
+    <owl:Class rdf:about="&fashion_ontology;NeckForm"/>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Necklace -->
+
+    <owl:Class rdf:about="&fashion_ontology;Necklace">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Jewellery"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Ring"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline -->
+
+    <owl:Class rdf:about="&fashion_ontology;Neckline">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;NeckForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Norway -->
+
+    <owl:Class rdf:about="&fashion_ontology;Norway">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Traditional"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#OpArt -->
+
+    <owl:Class rdf:about="&fashion_ontology;OpArt">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Surrealistic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Organic -->
+
+    <owl:Class rdf:about="&fashion_ontology;Organic">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Organical -->
+
+    <owl:Class rdf:about="&fashion_ontology;Organical">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Carpet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Oriental -->
+
+    <owl:Class rdf:about="&fashion_ontology;Oriental">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Organical"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Orientation -->
+
+    <owl:Class rdf:about="&fashion_ontology;Orientation"/>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Other -->
+
+    <owl:Class rdf:about="&fashion_ontology;Other">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Rhomb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#OuterWare -->
+
+    <owl:Class rdf:about="&fashion_ontology;OuterWare">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Clothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Overall -->
+
+    <owl:Class rdf:about="&fashion_ontology;Overall">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;InnerWare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Overlay -->
+
+    <owl:Class rdf:about="&fashion_ontology;Overlay">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;InnerWare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Paisley -->
+
+    <owl:Class rdf:about="&fashion_ontology;Paisley">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Twirly"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Paletot -->
+
+    <owl:Class rdf:about="&fashion_ontology;Paletot">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Coat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#PanelSkirt -->
+
+    <owl:Class rdf:about="&fashion_ontology;PanelSkirt">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Skirt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Panneaux -->
+
+    <owl:Class rdf:about="&fashion_ontology;Panneaux">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Realistic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Pants -->
+
+    <owl:Class rdf:about="&fashion_ontology;Pants">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LegWear"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Pattern -->
+
+    <owl:Class rdf:about="&fashion_ontology;Pattern">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Polychrome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#PeasantStyleSkirt -->
+
+    <owl:Class rdf:about="&fashion_ontology;PeasantStyleSkirt">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Skirt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Pelvis -->
+
+    <owl:Class rdf:about="&fashion_ontology;Pelvis">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#PencilSkirt -->
+
+    <owl:Class rdf:about="&fashion_ontology;PencilSkirt">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Skirt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#People -->
+
+    <owl:Class rdf:about="&fashion_ontology;People">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Pepita -->
+
+    <owl:Class rdf:about="&fashion_ontology;Pepita">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Complex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Petticoat -->
+
+    <owl:Class rdf:about="&fashion_ontology;Petticoat">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Skirt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Photoprint -->
+
+    <owl:Class rdf:about="&fashion_ontology;Photoprint">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pattern"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Picture -->
+
+    <owl:Class rdf:about="&fashion_ontology;Picture">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Pinstripe -->
+
+    <owl:Class rdf:about="&fashion_ontology;Pinstripe">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Simple"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Plants -->
+
+    <owl:Class rdf:about="&fashion_ontology;Plants">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Polo -->
+
+    <owl:Class rdf:about="&fashion_ontology;Polo">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;TShirt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Polychrome -->
+
+    <owl:Class rdf:about="&fashion_ontology;Polychrome">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Colorstyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Print -->
+
+    <owl:Class rdf:about="&fashion_ontology;Print">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;African"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Printed -->
+
+    <owl:Class rdf:about="&fashion_ontology;Printed">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Batik"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Psychodelic -->
+
+    <owl:Class rdf:about="&fashion_ontology;Psychodelic">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Surrealistic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Pucci -->
+
+    <owl:Class rdf:about="&fashion_ontology;Pucci">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Surrealistic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#PuffSleeve -->
+
+    <owl:Class rdf:about="&fashion_ontology;PuffSleeve">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Sleeve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Pullover -->
+
+    <owl:Class rdf:about="&fashion_ontology;Pullover">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Overlay"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Pumps -->
+
+    <owl:Class rdf:about="&fashion_ontology;Pumps">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shoe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Realistic -->
+
+    <owl:Class rdf:about="&fashion_ontology;Realistic">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Grafics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Reptile -->
+
+    <owl:Class rdf:about="&fashion_ontology;Reptile">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Animalprint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Retro -->
+
+    <owl:Class rdf:about="&fashion_ontology;Retro">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Surrealistic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Rhomb -->
+
+    <owl:Class rdf:about="&fashion_ontology;Rhomb">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Angled"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Ring -->
+
+    <owl:Class rdf:about="&fashion_ontology;Ring">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Jewellery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Round -->
+
+    <owl:Class rdf:about="&fashion_ontology;Round">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Geometric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#RoundCollar -->
+
+    <owl:Class rdf:about="&fashion_ontology;RoundCollar">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;CurvedCollar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#RoundNeckline -->
+
+    <owl:Class rdf:about="&fashion_ontology;RoundNeckline">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Neckline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Sandal -->
+
+    <owl:Class rdf:about="&fashion_ontology;Sandal">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shoe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Satchel -->
+
+    <owl:Class rdf:about="&fashion_ontology;Satchel">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Bag"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#SattleSkirt -->
+
+    <owl:Class rdf:about="&fashion_ontology;SattleSkirt">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Skirt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Saturated -->
+
+    <owl:Class rdf:about="&fashion_ontology;Saturated">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Saturation"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Unsaturated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Saturation -->
+
+    <owl:Class rdf:about="&fashion_ontology;Saturation">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Color"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Scarf -->
+
+    <owl:Class rdf:about="&fashion_ontology;Scarf">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Accessory"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Sunglasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Scottish -->
+
+    <owl:Class rdf:about="&fashion_ontology;Scottish">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Square"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#SecondLayer -->
+
+    <owl:Class rdf:about="&fashion_ontology;SecondLayer">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Shirt -->
+
+    <owl:Class rdf:about="&fashion_ontology;Shirt">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;InnerWare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Shoe -->
+
+    <owl:Class rdf:about="&fashion_ontology;Shoe">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Apparel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Shorts -->
+
+    <owl:Class rdf:about="&fashion_ontology;Shorts">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Shoulder -->
+
+    <owl:Class rdf:about="&fashion_ontology;Shoulder">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Simple -->
+
+    <owl:Class rdf:about="&fashion_ontology;Simple">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Weaved"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Single -->
+
+    <owl:Class rdf:about="&fashion_ontology;Single">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Line"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Skirt -->
+
+    <owl:Class rdf:about="&fashion_ontology;Skirt">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LegWear"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Sleeve -->
+
+    <owl:Class rdf:about="&fashion_ontology;Sleeve">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;ArmForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Slingbag -->
+
+    <owl:Class rdf:about="&fashion_ontology;Slingbag">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Bag"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Slipper -->
+
+    <owl:Class rdf:about="&fashion_ontology;Slipper">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shoe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#SmallCollar -->
+
+    <owl:Class rdf:about="&fashion_ontology;SmallCollar">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Collar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Snake -->
+
+    <owl:Class rdf:about="&fashion_ontology;Snake">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Reptile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Sneaker -->
+
+    <owl:Class rdf:about="&fashion_ontology;Sneaker">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shoe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#SpaghettiTop -->
+
+    <owl:Class rdf:about="&fashion_ontology;SpaghettiTop">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Top"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#SportsJacket -->
+
+    <owl:Class rdf:about="&fashion_ontology;SportsJacket">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Jacket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#SportyCollar -->
+
+    <owl:Class rdf:about="&fashion_ontology;SportyCollar">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;CasualCollar"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;SmallCollar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Square -->
+
+    <owl:Class rdf:about="&fashion_ontology;Square">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Angled"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#StandingCollar -->
+
+    <owl:Class rdf:about="&fashion_ontology;StandingCollar">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Collar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Stiletto -->
+
+    <owl:Class rdf:about="&fashion_ontology;Stiletto">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pumps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Stole -->
+
+    <owl:Class rdf:about="&fashion_ontology;Stole">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Accessory"/>
+        <owl:disjointWith rdf:resource="&fashion_ontology;Sunglasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Strap -->
+
+    <owl:Class rdf:about="&fashion_ontology;Strap">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;ArmForm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Sunglasses -->
+
+    <owl:Class rdf:about="&fashion_ontology;Sunglasses">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Accessory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Surrealistic -->
+
+    <owl:Class rdf:about="&fashion_ontology;Surrealistic">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Grafics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Sweatshirt -->
+
+    <owl:Class rdf:about="&fashion_ontology;Sweatshirt">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Pullover"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Symmetry -->
+
+    <owl:Class rdf:about="&fashion_ontology;Symmetry"/>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#TShirt -->
+
+    <owl:Class rdf:about="&fashion_ontology;TShirt">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shirt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Taches -->
+
+    <owl:Class rdf:about="&fashion_ontology;Taches">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Polychrome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#TankTop -->
+
+    <owl:Class rdf:about="&fashion_ontology;TankTop">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Top"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Tattersall -->
+
+    <owl:Class rdf:about="&fashion_ontology;Tattersall">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Square"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Territory -->
+
+    <owl:Class rdf:about="&fashion_ontology;Territory">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Natural"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Text -->
+
+    <owl:Class rdf:about="&fashion_ontology;Text">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Application"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Thigh -->
+
+    <owl:Class rdf:about="&fashion_ontology;Thigh">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;LowerParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#ThirdLayer -->
+
+    <owl:Class rdf:about="&fashion_ontology;ThirdLayer">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Thorax -->
+
+    <owl:Class rdf:about="&fashion_ontology;Thorax">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperParts"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#TieDye -->
+
+    <owl:Class rdf:about="&fashion_ontology;TieDye">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Crumpled"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#TightNeckline -->
+
+    <owl:Class rdf:about="&fashion_ontology;TightNeckline">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Neckline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#TightSleeve -->
+
+    <owl:Class rdf:about="&fashion_ontology;TightSleeve">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Sleeve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Top -->
+
+    <owl:Class rdf:about="&fashion_ontology;Top">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Shirt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Tote -->
+
+    <owl:Class rdf:about="&fashion_ontology;Tote">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Bag"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Traditional -->
+
+    <owl:Class rdf:about="&fashion_ontology;Traditional">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Grafics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Trenchcoat -->
+
+    <owl:Class rdf:about="&fashion_ontology;Trenchcoat">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Coat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Tropical -->
+
+    <owl:Class rdf:about="&fashion_ontology;Tropical">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Floral"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#TubeTop -->
+
+    <owl:Class rdf:about="&fashion_ontology;TubeTop">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Top"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Tunic -->
+
+    <owl:Class rdf:about="&fashion_ontology;Tunic">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Dress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Twirly -->
+
+    <owl:Class rdf:about="&fashion_ontology;Twirly">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Indian"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U1 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U1">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Abdomen"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U12 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U12">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U1"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U2"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U1"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U123 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U123">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U12"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U23"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U12"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U23"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U1234 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U1234">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U123"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U234"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U123"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U234"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U12345 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U12345">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U1234"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U2345"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U1234"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U2345"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U123456 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U123456">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U12345"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U23456"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U12345"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U23456"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U1234567 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U1234567">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U123456"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U234567"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U123456"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U234567"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U2 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U2">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Breast"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U23 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U23">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U2"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U3"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U2"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U3"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U234 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U234">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U23"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U34"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U23"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U34"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U2345 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U2345">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U234"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U345"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U234"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U345"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U23456 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U23456">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U2345"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U3456"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U2345"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U3456"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U234567 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U234567">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U23456"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U34567"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U23456"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U34567"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U3 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U3">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Thorax"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U34 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U34">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U3"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U4"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U3"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U4"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U345 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U345">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U34"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U45"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U34"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U45"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U3456 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U3456">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U345"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U456"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U345"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U456"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U34567 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U34567">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U3456"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U4567"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U3456"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U4567"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U4 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U4">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Shoulder"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U45 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U45">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U4"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U5"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U4"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U5"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U456 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U456">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U45"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U56"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U45"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U56"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U4567 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U4567">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U456"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U567"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U456"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U567"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U5 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U5">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Arm"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U56 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U56">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U5"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U6"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U5"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U6"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U567 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U567">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U56"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U67"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U56"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U67"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U6 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U6">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Ellbow"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U67 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U67">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&fashion_ontology;U6"/>
+                    <rdf:Description rdf:about="&fashion_ontology;U7"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U6"/>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;U7"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#U7 -->
+
+    <owl:Class rdf:about="&fashion_ontology;U7">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&fashion_ontology;covers"/>
+                <owl:someValuesFrom rdf:resource="&fashion_ontology;Forearm"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;UpperCoverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Unsaturated -->
+
+    <owl:Class rdf:about="&fashion_ontology;Unsaturated">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Saturation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#UpperCoverage -->
+
+    <owl:Class rdf:about="&fashion_ontology;UpperCoverage">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Coverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#UpperParts -->
+
+    <owl:Class rdf:about="&fashion_ontology;UpperParts">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Body"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#VHalter -->
+
+    <owl:Class rdf:about="&fashion_ontology;VHalter">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Halter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Vichy -->
+
+    <owl:Class rdf:about="&fashion_ontology;Vichy">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Square"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#WaxPrint -->
+
+    <owl:Class rdf:about="&fashion_ontology;WaxPrint">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Printed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Weaved -->
+
+    <owl:Class rdf:about="&fashion_ontology;Weaved">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Angled"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#WideNeckline -->
+
+    <owl:Class rdf:about="&fashion_ontology;WideNeckline">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Neckline"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#WideSleeve -->
+
+    <owl:Class rdf:about="&fashion_ontology;WideSleeve">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Sleeve"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Width -->
+
+    <owl:Class rdf:about="&fashion_ontology;Width"/>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#XHalter -->
+
+    <owl:Class rdf:about="&fashion_ontology;XHalter">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Halter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Yellow -->
+
+    <owl:Class rdf:about="&fashion_ontology;Yellow">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;Hue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Zebra -->
+
+    <owl:Class rdf:about="&fashion_ontology;Zebra">
+        <rdfs:subClassOf rdf:resource="&fashion_ontology;FurAnimal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Abdomen -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Abdomen">
+        <rdf:type rdf:resource="&fashion_ontology;Abdomen"/>
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperParts"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Ankle -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Ankle">
+        <rdf:type rdf:resource="&fashion_ontology;Ankle"/>
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerParts"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Arm -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Arm">
+        <rdf:type rdf:resource="&fashion_ontology;Arm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperParts"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Breast -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Breast">
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;Breast"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperParts"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Calf -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Calf">
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;Calf"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerParts"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Ellbow -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Ellbow">
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;Ellbow"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperParts"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Foot -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Foot">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Forearm -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Forearm">
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;Forearm"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperParts"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Knee -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Knee">
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;Knee"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerParts"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Pelvis -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Pelvis">
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerParts"/>
+        <rdf:type rdf:resource="&fashion_ontology;Pelvis"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Shoulder -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Shoulder">
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;Shoulder"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperParts"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Thigh -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Thigh">
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerParts"/>
+        <rdf:type rdf:resource="&fashion_ontology;Thigh"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Body_Thorax -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Body_Thorax">
+        <rdf:type rdf:resource="&fashion_ontology;Body"/>
+        <rdf:type rdf:resource="&fashion_ontology;Thorax"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperParts"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Closure_DoubleBreasted -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Closure_DoubleBreasted">
+        <rdf:type rdf:resource="&fashion_ontology;Buttons"/>
+        <rdf:type rdf:resource="&fashion_ontology;Closure"/>
+        <rdf:type rdf:resource="&fashion_ontology;Detail"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Closure_SingleBreasted -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Closure_SingleBreasted">
+        <rdf:type rdf:resource="&fashion_ontology;Buttons"/>
+        <rdf:type rdf:resource="&fashion_ontology;Closure"/>
+        <rdf:type rdf:resource="&fashion_ontology;Detail"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Closure_Zipper -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Closure_Zipper">
+        <rdf:type rdf:resource="&fashion_ontology;Closure"/>
+        <rdf:type rdf:resource="&fashion_ontology;Detail"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_BandCollar -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_BandCollar">
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;SmallCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;StandingCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_CampCollar -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_CampCollar">
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;EdgedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;SmallCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_CapeCollar -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_CapeCollar">
+        <rdf:type rdf:resource="&fashion_ontology;BigCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;CurvedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_Chelsea -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_Chelsea">
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;CurvedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_ClassicCollar -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_ClassicCollar">
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;EdgedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;SmallCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_FallingBand -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_FallingBand">
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;CurvedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;RoundCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_FurCollar -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_FurCollar">
+        <rdf:type rdf:resource="&fashion_ontology;BigCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;ExtravagantCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_HighNeck -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_HighNeck">
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;StandingCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_Johnny -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_Johnny">
+        <rdf:type rdf:resource="&fashion_ontology;CasualCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;SmallCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;SportyCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_Lacoste -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_Lacoste">
+        <rdf:type rdf:resource="&fashion_ontology;CasualCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;SmallCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;SportyCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_Mandarin -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_Mandarin">
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;SmallCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;StandingCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_Middy -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_Middy">
+        <rdf:type rdf:resource="&fashion_ontology;BigCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;CasualCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;CurvedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;MaritimeCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_Notched -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_Notched">
+        <rdf:type rdf:resource="&fashion_ontology;BigCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;EdgedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_PeterPan -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_PeterPan">
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;CurvedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;RoundCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_Pierrot -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_Pierrot">
+        <rdf:type rdf:resource="&fashion_ontology;BigCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;ExtravagantCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_Revers -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_Revers">
+        <rdf:type rdf:resource="&fashion_ontology;BigCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;EdgedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_Sailor -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_Sailor">
+        <rdf:type rdf:resource="&fashion_ontology;BigCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;CasualCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;CurvedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;MaritimeCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_Shawl -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_Shawl">
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;CurvedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_SmallRoundCollar -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_SmallRoundCollar">
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;CurvedCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;RoundCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;SmallCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_Tunic -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_Tunic">
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;SmallCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;StandingCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Collar_YCollar -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Collar_YCollar">
+        <rdf:type rdf:resource="&fashion_ontology;CasualCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;Collar"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;SmallCollar"/>
+        <rdf:type rdf:resource="&fashion_ontology;SportyCollar"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Color_Black -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Color_Black">
+        <rdf:type rdf:resource="&fashion_ontology;Color"/>
+        <rdf:type rdf:resource="&fashion_ontology;Cyan"/>
+        <rdf:type rdf:resource="&fashion_ontology;Dark"/>
+        <rdf:type rdf:resource="&fashion_ontology;Hue"/>
+        <rdf:type rdf:resource="&fashion_ontology;Lightness"/>
+        <rdf:type rdf:resource="&fashion_ontology;Magenta"/>
+        <rdf:type rdf:resource="&fashion_ontology;Saturation"/>
+        <rdf:type rdf:resource="&fashion_ontology;Unsaturated"/>
+        <rdf:type rdf:resource="&fashion_ontology;Yellow"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Color_Blue -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Color_Blue">
+        <rdf:type rdf:resource="&fashion_ontology;Color"/>
+        <rdf:type rdf:resource="&fashion_ontology;Cyan"/>
+        <rdf:type rdf:resource="&fashion_ontology;Hue"/>
+        <rdf:type rdf:resource="&fashion_ontology;Lightness"/>
+        <rdf:type rdf:resource="&fashion_ontology;Magenta"/>
+        <rdf:type rdf:resource="&fashion_ontology;MidLight"/>
+        <rdf:type rdf:resource="&fashion_ontology;Saturated"/>
+        <rdf:type rdf:resource="&fashion_ontology;Saturation"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Color_White -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Color_White">
+        <rdf:type rdf:resource="&fashion_ontology;Color"/>
+        <rdf:type rdf:resource="&fashion_ontology;Light"/>
+        <rdf:type rdf:resource="&fashion_ontology;Lightness"/>
+        <rdf:type rdf:resource="&fashion_ontology;Saturation"/>
+        <rdf:type rdf:resource="&fashion_ontology;Unsaturated"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_Add -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_Add">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_AdidasOriginals -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_AdidasOriginals">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_Agnona -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_Agnona">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_AlainQuilici -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_AlainQuilici">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_AlbertoFasciani -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_AlbertoFasciani">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_AlessandroDellAcqua -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_AlessandroDellAcqua">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_AlexanderWang -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_AlexanderWang">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_AngelosFrentzos -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_AngelosFrentzos">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_AnnDemeulBlanche -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_AnnDemeulBlanche">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_AnnDemeulemeester -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_AnnDemeulemeester">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_AnnaSui -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_AnnaSui">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_Antonini -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_Antonini">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_Armuse -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_Armuse">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_ArneAndCarlos -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_ArneAndCarlos">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_Asics -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_Asics">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_AurelieBidermann -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_AurelieBidermann">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_Aviu -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_Aviu">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_Azzaro -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_Azzaro">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_Bally -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_Bally">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_SevenForAllMankind -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_SevenForAllMankind">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Designer_ThreeOnePhillipLim -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Designer_ThreeOnePhillipLim">
+        <rdf:type rdf:resource="&fashion_ontology;Designer"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Drapery_Gather -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Drapery_Gather">
+        <rdf:type rdf:resource="&fashion_ontology;Detail"/>
+        <rdf:type rdf:resource="&fashion_ontology;Drapery"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Drapery_Jabot -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Drapery_Jabot">
+        <rdf:type rdf:resource="&fashion_ontology;Detail"/>
+        <rdf:type rdf:resource="&fashion_ontology;Drapery"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Drapery_Pleat -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Drapery_Pleat">
+        <rdf:type rdf:resource="&fashion_ontology;Detail"/>
+        <rdf:type rdf:resource="&fashion_ontology;Drapery"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline_BoatNeck -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Neckline_BoatNeck">
+        <rdf:type rdf:resource="&fashion_ontology;LinearNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Neckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;WideNeckline"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline_Hanging -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Neckline_Hanging">
+        <rdf:type rdf:resource="&fashion_ontology;DeepNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;LinearNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Neckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;WideNeckline"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline_Jewel -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Neckline_Jewel">
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Neckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;RoundNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;TightNeckline"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline_Mock -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Neckline_Mock">
+        <rdf:type rdf:resource="&fashion_ontology;HighNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Neckline"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline_OffTheShoulder -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Neckline_OffTheShoulder">
+        <rdf:type rdf:resource="&fashion_ontology;LinearNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Neckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;WideNeckline"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline_Scoop -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Neckline_Scoop">
+        <rdf:type rdf:resource="&fashion_ontology;DeepNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Neckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;RoundNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;WideNeckline"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline_SquareNeck -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Neckline_SquareNeck">
+        <rdf:type rdf:resource="&fashion_ontology;DeepNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;EdgedNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Neckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;WideNeckline"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline_Sweetheart -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Neckline_Sweetheart">
+        <rdf:type rdf:resource="&fashion_ontology;DeepNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Neckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;RoundNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;WideNeckline"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline_TubeNeck -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Neckline_TubeNeck">
+        <rdf:type rdf:resource="&fashion_ontology;DeepNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;LinearNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Neckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;WideNeckline"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline_TurtleNeck -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Neckline_TurtleNeck">
+        <rdf:type rdf:resource="&fashion_ontology;HighNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Neckline"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Neckline_VNeck -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Neckline_VNeck">
+        <rdf:type rdf:resource="&fashion_ontology;EdgedNeckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;NeckForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Neckline"/>
+        <rdf:type rdf:resource="&fashion_ontology;TightNeckline"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Orientation_Diagonal -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Orientation_Diagonal">
+        <rdf:type rdf:resource="&fashion_ontology;Orientation"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Orientation_Horizontal -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Orientation_Horizontal">
+        <rdf:type rdf:resource="&fashion_ontology;Orientation"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Orientation_Vertical -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Orientation_Vertical">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Product_10 -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Product_10">
+        <rdf:type rdf:resource="&fashion_ontology;Apparel"/>
+        <rdf:type rdf:resource="&fashion_ontology;Clothing"/>
+        <rdf:type rdf:resource="&fashion_ontology;Coverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Dress"/>
+        <rdf:type rdf:resource="&fashion_ontology;Fashion"/>
+        <rdf:type rdf:resource="&fashion_ontology;InnerWare"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerCoverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;U1"/>
+        <rdf:type rdf:resource="&fashion_ontology;U12"/>
+        <rdf:type rdf:resource="&fashion_ontology;U123"/>
+        <rdf:type rdf:resource="&fashion_ontology;U1234"/>
+        <rdf:type rdf:resource="&fashion_ontology;U12345"/>
+        <rdf:type rdf:resource="&fashion_ontology;U123456"/>
+        <rdf:type rdf:resource="&fashion_ontology;U1234567"/>
+        <rdf:type rdf:resource="&fashion_ontology;U2"/>
+        <rdf:type rdf:resource="&fashion_ontology;U23"/>
+        <rdf:type rdf:resource="&fashion_ontology;U234"/>
+        <rdf:type rdf:resource="&fashion_ontology;U2345"/>
+        <rdf:type rdf:resource="&fashion_ontology;U23456"/>
+        <rdf:type rdf:resource="&fashion_ontology;U234567"/>
+        <rdf:type rdf:resource="&fashion_ontology;U3"/>
+        <rdf:type rdf:resource="&fashion_ontology;U34"/>
+        <rdf:type rdf:resource="&fashion_ontology;U345"/>
+        <rdf:type rdf:resource="&fashion_ontology;U3456"/>
+        <rdf:type rdf:resource="&fashion_ontology;U34567"/>
+        <rdf:type rdf:resource="&fashion_ontology;U4"/>
+        <rdf:type rdf:resource="&fashion_ontology;U45"/>
+        <rdf:type rdf:resource="&fashion_ontology;U456"/>
+        <rdf:type rdf:resource="&fashion_ontology;U4567"/>
+        <rdf:type rdf:resource="&fashion_ontology;U5"/>
+        <rdf:type rdf:resource="&fashion_ontology;U56"/>
+        <rdf:type rdf:resource="&fashion_ontology;U567"/>
+        <rdf:type rdf:resource="&fashion_ontology;U6"/>
+        <rdf:type rdf:resource="&fashion_ontology;U67"/>
+        <rdf:type rdf:resource="&fashion_ontology;U7"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperCoverage"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <covers rdf:resource="&fashion_ontology;Body_Abdomen"/>
+        <covers rdf:resource="&fashion_ontology;Body_Arm"/>
+        <covers rdf:resource="&fashion_ontology;Body_Breast"/>
+        <covers rdf:resource="&fashion_ontology;Body_Ellbow"/>
+        <covers rdf:resource="&fashion_ontology;Body_Forearm"/>
+        <covers rdf:resource="&fashion_ontology;Body_Pelvis"/>
+        <covers rdf:resource="&fashion_ontology;Body_Shoulder"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thigh"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thorax"/>
+        <hasColor rdf:resource="&fashion_ontology;Color_White"/>
+        <isDesignedBy rdf:resource="&fashion_ontology;Designer_ThreeOnePhillipLim"/>
+        <hasDetail rdf:resource="&fashion_ontology;Drapery_Gather"/>
+        <hasNeckForm rdf:resource="&fashion_ontology;Neckline_VNeck"/>
+        <hasSymmetry rdf:resource="&fashion_ontology;Symmetry_Symmetric"/>
+        <hasWidth rdf:resource="&fashion_ontology;Width_Normal"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Product_11 -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Product_11">
+        <rdf:type rdf:resource="&fashion_ontology;Apparel"/>
+        <rdf:type rdf:resource="&fashion_ontology;Clothing"/>
+        <rdf:type rdf:resource="&fashion_ontology;Coverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Dress"/>
+        <rdf:type rdf:resource="&fashion_ontology;Fashion"/>
+        <rdf:type rdf:resource="&fashion_ontology;InnerWare"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12"/>
+        <rdf:type rdf:resource="&fashion_ontology;L123"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2"/>
+        <rdf:type rdf:resource="&fashion_ontology;L23"/>
+        <rdf:type rdf:resource="&fashion_ontology;L234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L3"/>
+        <rdf:type rdf:resource="&fashion_ontology;L34"/>
+        <rdf:type rdf:resource="&fashion_ontology;L345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L4"/>
+        <rdf:type rdf:resource="&fashion_ontology;L45"/>
+        <rdf:type rdf:resource="&fashion_ontology;L5"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerCoverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;U1"/>
+        <rdf:type rdf:resource="&fashion_ontology;U12"/>
+        <rdf:type rdf:resource="&fashion_ontology;U123"/>
+        <rdf:type rdf:resource="&fashion_ontology;U2"/>
+        <rdf:type rdf:resource="&fashion_ontology;U23"/>
+        <rdf:type rdf:resource="&fashion_ontology;U3"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperCoverage"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <covers rdf:resource="&fashion_ontology;Body_Abdomen"/>
+        <covers rdf:resource="&fashion_ontology;Body_Ankle"/>
+        <covers rdf:resource="&fashion_ontology;Body_Breast"/>
+        <covers rdf:resource="&fashion_ontology;Body_Calf"/>
+        <covers rdf:resource="&fashion_ontology;Body_Knee"/>
+        <covers rdf:resource="&fashion_ontology;Body_Pelvis"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thigh"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thorax"/>
+        <hasColor rdf:resource="&fashion_ontology;Color_White"/>
+        <isDesignedBy rdf:resource="&fashion_ontology;Designer_ThreeOnePhillipLim"/>
+        <hasDetail rdf:resource="&fashion_ontology;Drapery_Gather"/>
+        <hasNeckForm rdf:resource="&fashion_ontology;Neckline_SquareNeck"/>
+        <hasSymmetry rdf:resource="&fashion_ontology;Symmetry_Symmetric"/>
+        <hasWidth rdf:resource="&fashion_ontology;Width_Wide"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Product_12 -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Product_12">
+        <rdf:type rdf:resource="&fashion_ontology;Apparel"/>
+        <rdf:type rdf:resource="&fashion_ontology;Clothing"/>
+        <rdf:type rdf:resource="&fashion_ontology;Coverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Dress"/>
+        <rdf:type rdf:resource="&fashion_ontology;Fashion"/>
+        <rdf:type rdf:resource="&fashion_ontology;InnerWare"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12"/>
+        <rdf:type rdf:resource="&fashion_ontology;L123"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2"/>
+        <rdf:type rdf:resource="&fashion_ontology;L23"/>
+        <rdf:type rdf:resource="&fashion_ontology;L234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L3"/>
+        <rdf:type rdf:resource="&fashion_ontology;L34"/>
+        <rdf:type rdf:resource="&fashion_ontology;L345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L4"/>
+        <rdf:type rdf:resource="&fashion_ontology;L45"/>
+        <rdf:type rdf:resource="&fashion_ontology;L5"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerCoverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;U1"/>
+        <rdf:type rdf:resource="&fashion_ontology;U12"/>
+        <rdf:type rdf:resource="&fashion_ontology;U123"/>
+        <rdf:type rdf:resource="&fashion_ontology;U2"/>
+        <rdf:type rdf:resource="&fashion_ontology;U23"/>
+        <rdf:type rdf:resource="&fashion_ontology;U3"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperCoverage"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <covers rdf:resource="&fashion_ontology;Body_Abdomen"/>
+        <covers rdf:resource="&fashion_ontology;Body_Ankle"/>
+        <covers rdf:resource="&fashion_ontology;Body_Breast"/>
+        <covers rdf:resource="&fashion_ontology;Body_Calf"/>
+        <covers rdf:resource="&fashion_ontology;Body_Knee"/>
+        <covers rdf:resource="&fashion_ontology;Body_Pelvis"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thigh"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thorax"/>
+        <hasColor rdf:resource="&fashion_ontology;Color_White"/>
+        <isDesignedBy rdf:resource="&fashion_ontology;Designer_ThreeOnePhillipLim"/>
+        <hasDetail rdf:resource="&fashion_ontology;Drapery_Gather"/>
+        <hasNeckForm rdf:resource="&fashion_ontology;Neckline_VNeck"/>
+        <hasSymmetry rdf:resource="&fashion_ontology;Symmetry_Asymmetric"/>
+        <hasWidth rdf:resource="&fashion_ontology;Width_Tight"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Product_124 -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Product_124">
+        <rdf:type rdf:resource="&fashion_ontology;Apparel"/>
+        <rdf:type rdf:resource="&fashion_ontology;Clothing"/>
+        <rdf:type rdf:resource="&fashion_ontology;Coverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Fashion"/>
+        <rdf:type rdf:resource="&fashion_ontology;InnerWare"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12"/>
+        <rdf:type rdf:resource="&fashion_ontology;L123"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2"/>
+        <rdf:type rdf:resource="&fashion_ontology;L23"/>
+        <rdf:type rdf:resource="&fashion_ontology;L234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L3"/>
+        <rdf:type rdf:resource="&fashion_ontology;L34"/>
+        <rdf:type rdf:resource="&fashion_ontology;L345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L4"/>
+        <rdf:type rdf:resource="&fashion_ontology;L45"/>
+        <rdf:type rdf:resource="&fashion_ontology;L5"/>
+        <rdf:type rdf:resource="&fashion_ontology;LegWear"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerCoverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Pants"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <covers rdf:resource="&fashion_ontology;Body_Ankle"/>
+        <covers rdf:resource="&fashion_ontology;Body_Calf"/>
+        <covers rdf:resource="&fashion_ontology;Body_Knee"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thigh"/>
+        <hasColor rdf:resource="&fashion_ontology;Color_White"/>
+        <isDesignedBy rdf:resource="&fashion_ontology;Designer_AnnDemeulemeester"/>
+        <hasSymmetry rdf:resource="&fashion_ontology;Symmetry_Symmetric"/>
+        <hasWidth rdf:resource="&fashion_ontology;Width_Wide"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Product_220 -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Product_220">
+        <rdf:type rdf:resource="&fashion_ontology;Apparel"/>
+        <rdf:type rdf:resource="&fashion_ontology;Clothing"/>
+        <rdf:type rdf:resource="&fashion_ontology;Coverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Fashion"/>
+        <rdf:type rdf:resource="&fashion_ontology;InnerWare"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12"/>
+        <rdf:type rdf:resource="&fashion_ontology;L123"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2"/>
+        <rdf:type rdf:resource="&fashion_ontology;L23"/>
+        <rdf:type rdf:resource="&fashion_ontology;L234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L3"/>
+        <rdf:type rdf:resource="&fashion_ontology;L34"/>
+        <rdf:type rdf:resource="&fashion_ontology;L4"/>
+        <rdf:type rdf:resource="&fashion_ontology;LegWear"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerCoverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Pants"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <covers rdf:resource="&fashion_ontology;Body_Calf"/>
+        <covers rdf:resource="&fashion_ontology;Body_Knee"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thigh"/>
+        <isDesignedBy rdf:resource="&fashion_ontology;Designer_Bally"/>
+        <hasSymmetry rdf:resource="&fashion_ontology;Symmetry_Symmetric"/>
+        <hasWidth rdf:resource="&fashion_ontology;Width_Wide"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Product_26 -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Product_26">
+        <rdf:type rdf:resource="&fashion_ontology;Apparel"/>
+        <rdf:type rdf:resource="&fashion_ontology;Clothing"/>
+        <rdf:type rdf:resource="&fashion_ontology;Coverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Fashion"/>
+        <rdf:type rdf:resource="&fashion_ontology;InnerWare"/>
+        <rdf:type rdf:resource="&fashion_ontology;Jeans"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12"/>
+        <rdf:type rdf:resource="&fashion_ontology;L123"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2"/>
+        <rdf:type rdf:resource="&fashion_ontology;L23"/>
+        <rdf:type rdf:resource="&fashion_ontology;L234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L3"/>
+        <rdf:type rdf:resource="&fashion_ontology;L34"/>
+        <rdf:type rdf:resource="&fashion_ontology;L345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L4"/>
+        <rdf:type rdf:resource="&fashion_ontology;L45"/>
+        <rdf:type rdf:resource="&fashion_ontology;L5"/>
+        <rdf:type rdf:resource="&fashion_ontology;LegWear"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerCoverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Pants"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <covers rdf:resource="&fashion_ontology;Body_Ankle"/>
+        <covers rdf:resource="&fashion_ontology;Body_Calf"/>
+        <covers rdf:resource="&fashion_ontology;Body_Knee"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thigh"/>
+        <hasColor rdf:resource="&fashion_ontology;Color_Black"/>
+        <isDesignedBy rdf:resource="&fashion_ontology;Designer_SevenForAllMankind"/>
+        <hasSymmetry rdf:resource="&fashion_ontology;Symmetry_Symmetric"/>
+        <hasWidth rdf:resource="&fashion_ontology;Width_Tight"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Product_27 -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Product_27">
+        <rdf:type rdf:resource="&fashion_ontology;Apparel"/>
+        <rdf:type rdf:resource="&fashion_ontology;Clothing"/>
+        <rdf:type rdf:resource="&fashion_ontology;Coverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Fashion"/>
+        <rdf:type rdf:resource="&fashion_ontology;InnerWare"/>
+        <rdf:type rdf:resource="&fashion_ontology;Jeans"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12"/>
+        <rdf:type rdf:resource="&fashion_ontology;L123"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2"/>
+        <rdf:type rdf:resource="&fashion_ontology;L23"/>
+        <rdf:type rdf:resource="&fashion_ontology;L234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L3"/>
+        <rdf:type rdf:resource="&fashion_ontology;L34"/>
+        <rdf:type rdf:resource="&fashion_ontology;L345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L4"/>
+        <rdf:type rdf:resource="&fashion_ontology;L45"/>
+        <rdf:type rdf:resource="&fashion_ontology;L5"/>
+        <rdf:type rdf:resource="&fashion_ontology;LegWear"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerCoverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Pants"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <covers rdf:resource="&fashion_ontology;Body_Ankle"/>
+        <covers rdf:resource="&fashion_ontology;Body_Calf"/>
+        <covers rdf:resource="&fashion_ontology;Body_Knee"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thigh"/>
+        <hasColor rdf:resource="&fashion_ontology;Color_Blue"/>
+        <isDesignedBy rdf:resource="&fashion_ontology;Designer_SevenForAllMankind"/>
+        <hasSymmetry rdf:resource="&fashion_ontology;Symmetry_Symmetric"/>
+        <hasWidth rdf:resource="&fashion_ontology;Width_Tight"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Product_3 -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Product_3">
+        <rdf:type rdf:resource="&fashion_ontology;Apparel"/>
+        <rdf:type rdf:resource="&fashion_ontology;Clothing"/>
+        <rdf:type rdf:resource="&fashion_ontology;Coverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Fashion"/>
+        <rdf:type rdf:resource="&fashion_ontology;InnerWare"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12"/>
+        <rdf:type rdf:resource="&fashion_ontology;L123"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2"/>
+        <rdf:type rdf:resource="&fashion_ontology;L23"/>
+        <rdf:type rdf:resource="&fashion_ontology;L234"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L3"/>
+        <rdf:type rdf:resource="&fashion_ontology;L34"/>
+        <rdf:type rdf:resource="&fashion_ontology;L345"/>
+        <rdf:type rdf:resource="&fashion_ontology;L4"/>
+        <rdf:type rdf:resource="&fashion_ontology;L45"/>
+        <rdf:type rdf:resource="&fashion_ontology;L5"/>
+        <rdf:type rdf:resource="&fashion_ontology;LegWear"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerCoverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Marlene"/>
+        <rdf:type rdf:resource="&fashion_ontology;Pants"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <covers rdf:resource="&fashion_ontology;Body_Ankle"/>
+        <covers rdf:resource="&fashion_ontology;Body_Calf"/>
+        <covers rdf:resource="&fashion_ontology;Body_Knee"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thigh"/>
+        <hasColor rdf:resource="&fashion_ontology;Color_Black"/>
+        <isDesignedBy rdf:resource="&fashion_ontology;Designer_ThreeOnePhillipLim"/>
+        <hasSymmetry rdf:resource="&fashion_ontology;Symmetry_Symmetric"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Product_8 -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Product_8">
+        <rdf:type rdf:resource="&fashion_ontology;Apparel"/>
+        <rdf:type rdf:resource="&fashion_ontology;Clothing"/>
+        <rdf:type rdf:resource="&fashion_ontology;Coverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Dress"/>
+        <rdf:type rdf:resource="&fashion_ontology;Fashion"/>
+        <rdf:type rdf:resource="&fashion_ontology;InnerWare"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerCoverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;U1"/>
+        <rdf:type rdf:resource="&fashion_ontology;U12"/>
+        <rdf:type rdf:resource="&fashion_ontology;U123"/>
+        <rdf:type rdf:resource="&fashion_ontology;U2"/>
+        <rdf:type rdf:resource="&fashion_ontology;U23"/>
+        <rdf:type rdf:resource="&fashion_ontology;U3"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperCoverage"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <covers rdf:resource="&fashion_ontology;Body_Abdomen"/>
+        <covers rdf:resource="&fashion_ontology;Body_Breast"/>
+        <covers rdf:resource="&fashion_ontology;Body_Pelvis"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thigh"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thorax"/>
+        <hasDetail rdf:resource="&fashion_ontology;Closure_Zipper"/>
+        <hasColor rdf:resource="&fashion_ontology;Color_Black"/>
+        <isDesignedBy rdf:resource="&fashion_ontology;Designer_ThreeOnePhillipLim"/>
+        <hasDetail rdf:resource="&fashion_ontology;Drapery_Gather"/>
+        <hasDetail rdf:resource="&fashion_ontology;Drapery_Jabot"/>
+        <hasNeckForm rdf:resource="&fashion_ontology;Neckline_VNeck"/>
+        <hasSymmetry rdf:resource="&fashion_ontology;Symmetry_Symmetric"/>
+        <hasWidth rdf:resource="&fashion_ontology;Width_Normal"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Product_93 -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Product_93">
+        <rdf:type rdf:resource="&fashion_ontology;Apparel"/>
+        <rdf:type rdf:resource="&fashion_ontology;Clothing"/>
+        <rdf:type rdf:resource="&fashion_ontology;Coverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;Dress"/>
+        <rdf:type rdf:resource="&fashion_ontology;Fashion"/>
+        <rdf:type rdf:resource="&fashion_ontology;InnerWare"/>
+        <rdf:type rdf:resource="&fashion_ontology;L1"/>
+        <rdf:type rdf:resource="&fashion_ontology;L12"/>
+        <rdf:type rdf:resource="&fashion_ontology;L123"/>
+        <rdf:type rdf:resource="&fashion_ontology;L2"/>
+        <rdf:type rdf:resource="&fashion_ontology;L23"/>
+        <rdf:type rdf:resource="&fashion_ontology;L3"/>
+        <rdf:type rdf:resource="&fashion_ontology;LowerCoverage"/>
+        <rdf:type rdf:resource="&fashion_ontology;U1"/>
+        <rdf:type rdf:resource="&fashion_ontology;U12"/>
+        <rdf:type rdf:resource="&fashion_ontology;U123"/>
+        <rdf:type rdf:resource="&fashion_ontology;U2"/>
+        <rdf:type rdf:resource="&fashion_ontology;U23"/>
+        <rdf:type rdf:resource="&fashion_ontology;U3"/>
+        <rdf:type rdf:resource="&fashion_ontology;UpperCoverage"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <covers rdf:resource="&fashion_ontology;Body_Abdomen"/>
+        <covers rdf:resource="&fashion_ontology;Body_Breast"/>
+        <covers rdf:resource="&fashion_ontology;Body_Knee"/>
+        <covers rdf:resource="&fashion_ontology;Body_Pelvis"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thigh"/>
+        <covers rdf:resource="&fashion_ontology;Body_Thorax"/>
+        <hasColor rdf:resource="&fashion_ontology;Color_Black"/>
+        <isDesignedBy rdf:resource="&fashion_ontology;Designer_AlessandroDellAcqua"/>
+        <hasNeckForm rdf:resource="&fashion_ontology;Neckline_VNeck"/>
+        <hasSymmetry rdf:resource="&fashion_ontology;Symmetry_Symmetric"/>
+        <hasWidth rdf:resource="&fashion_ontology;Width_Tight"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Strap_BroadHalter -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Strap_BroadHalter">
+        <rdf:type rdf:resource="&fashion_ontology;ArmForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;BroadStrap"/>
+        <rdf:type rdf:resource="&fashion_ontology;Halter"/>
+        <rdf:type rdf:resource="&fashion_ontology;Strap"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Strap_NarrowHalter -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Strap_NarrowHalter">
+        <rdf:type rdf:resource="&fashion_ontology;ArmForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;Halter"/>
+        <rdf:type rdf:resource="&fashion_ontology;NarrowStrap"/>
+        <rdf:type rdf:resource="&fashion_ontology;Strap"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Strap_Spaghetti -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Strap_Spaghetti">
+        <rdf:type rdf:resource="&fashion_ontology;ArmForm"/>
+        <rdf:type rdf:resource="&fashion_ontology;NarrowStrap"/>
+        <rdf:type rdf:resource="&fashion_ontology;Strap"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Symmetry_Asymmetric -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Symmetry_Asymmetric">
+        <rdf:type rdf:resource="&fashion_ontology;Symmetry"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Symmetry_Symmetric -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Symmetry_Symmetric">
+        <rdf:type rdf:resource="&fashion_ontology;Symmetry"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Width_Normal -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Width_Normal">
+        <rdf:type rdf:resource="&fashion_ontology;Width"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Width_Tight -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Width_Tight">
+        <rdf:type rdf:resource="&fashion_ontology;Width"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://master.yanenko.de/fashion_ontology.owl#Width_Wide -->
+
+    <owl:Thing rdf:about="&fashion_ontology;Width_Wide">
+        <rdf:type rdf:resource="&fashion_ontology;Width"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <swrl:Variable rdf:about="urn:swrl#x"/>
+    <swrl:Variable rdf:about="&fashion_ontology;x"/>
+    <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&fashion_ontology;LegWear"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument2 rdf:resource="&fashion_ontology;Body_Pelvis"/>
+                        <swrl:propertyPredicate rdf:resource="&fashion_ontology;covers"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument2 rdf:resource="&fashion_ontology;Width_Wide"/>
+                        <swrl:propertyPredicate rdf:resource="&fashion_ontology;hasWidth"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&fashion_ontology;Marlene"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&fashion_ontology;ThirdLayer"/>
+                        <swrl:argument1 rdf:resource="&fashion_ontology;x"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&fashion_ontology;OuterWare"/>
+                        <swrl:argument1 rdf:resource="&fashion_ontology;x"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument2 rdf:resource="&fashion_ontology;Body_Foot"/>
+                        <swrl:propertyPredicate rdf:resource="&fashion_ontology;covers"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&fashion_ontology;Shoe"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest>
+                    <swrl:AtomList>
+                        <rdf:rest rdf:resource="&rdf;nil"/>
+                        <rdf:first>
+                            <swrl:IndividualPropertyAtom>
+                                <swrl:argument2 rdf:resource="&fashion_ontology;Neckline_Mock"/>
+                                <swrl:propertyPredicate rdf:resource="&fashion_ontology;hasNeckForm"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                            </swrl:IndividualPropertyAtom>
+                        </rdf:first>
+                    </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&fashion_ontology;Apparel"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument2 rdf:resource="&fashion_ontology;Closure_Zipper"/>
+                        <swrl:propertyPredicate rdf:resource="&fashion_ontology;hasDetail"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&fashion_ontology;Overlay"/>
+                        <swrl:argument1 rdf:resource="&fashion_ontology;x"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&fashion_ontology;SecondLayer"/>
+                        <swrl:argument1 rdf:resource="&fashion_ontology;x"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+    </swrl:Imp>
+    <swrl:Imp>
+        <swrl:head>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                        <swrl:argument2 rdf:resource="&fashion_ontology;Strap_Spaghetti"/>
+                        <swrl:propertyPredicate rdf:resource="&fashion_ontology;hasArmForm"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:IndividualPropertyAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:head>
+        <swrl:body>
+            <swrl:AtomList>
+                <rdf:rest rdf:resource="&rdf;nil"/>
+                <rdf:first>
+                    <swrl:ClassAtom>
+                        <swrl:classPredicate rdf:resource="&fashion_ontology;SpaghettiTop"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                    </swrl:ClassAtom>
+                </rdf:first>
+            </swrl:AtomList>
+        </swrl:body>
+    </swrl:Imp>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1413) http://owlapi.sourceforge.net -->
+

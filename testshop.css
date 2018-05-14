@@ -1,0 +1,314 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+h1, h2, h3 {
+	margin: 10px 0 10px 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	color: #000;
+}
+
+h3 {
+	margin: 10px 0 0 0;
+}
+
+a {
+	text-decoration: none;
+	color: #666;
+}
+
+img {
+	border: none;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	border-bottom: 1px solid #ccc;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+
+#page {
+	margin: 0 auto;
+	width: 800px;
+}
+
+#head {
+	height: 89px;
+}
+
+#logo {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 100px;
+	color: #eee;
+	float: left;
+	font-variant: small-caps;
+	width: 590px;
+	line-height: 65px;
+	height: 68px;
+	padding-top: 20px;
+}
+
+#logo span {
+	color: #666;
+	font-size: 40px;
+	position: relative;
+	bottom: 42px;
+	left: 195px;
+	width: 235px;
+	display: block;
+}
+
+#credit {
+	float: left;
+	line-height: 1.5em;
+	width: 110px;
+}
+
+#nav_main {
+	float: left;
+	line-height: 1.5em;
+	text-align: right;
+	width: 100px;
+}
+
+#nav_main a {
+	color: #d50b10;
+}
+
+#cart {
+	text-align: right;
+	background: #eee;
+	height: 28px;
+}
+
+#cart a {
+	color: #000;
+}
+
+#cart span {
+	position: relative;
+	bottom: 6px;
+	left: 5px;
+}
+
+#main {
+	border-right: 3px solid #eee;
+	border-bottom: 3px solid #eee;
+	border-top: 3px solid #666;
+	background: url(images/main.gif) top left repeat-y;
+}
+
+#nav {
+	width: 200px;
+	float: left;
+}
+
+#nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+#nav ul li {
+	list-style: none;
+	font-size: 14px;
+	line-height: 20px;
+	padding-left: 10px;
+	width: 189px;
+	border-top: 1px solid #fff;
+}
+
+#nav ul li.level1 {
+	list-style: none;
+	font-size: 12px;
+	öine-height: 16px;
+	padding-left: 20px;
+	width: 179px;
+	border-top: 1px solid #f7f7f7;
+}
+
+#nav ul li.level2 {
+	list-style: none;
+	font-size: 11px;
+	line-height: 14px;
+	padding-left: 30px;
+	width: 169px;
+	border-top: none;
+}
+
+#content {
+	width: 577px;
+	line-height: 1.5em;
+	float: left;
+	padding: 10px;
+}
+
+#product_image {
+	float: left;
+	width: 250px;
+}
+
+#product_image img {
+	border: 3px solid #666;
+}
+
+#description {
+	float: left;
+	width: 320px;
+}
+
+#description h1, #description h3 {
+	display: block;
+	text-align: center;
+}
+
+#buy {
+	margin-top: 20px;
+	clear: both;
+}
+
+#price {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	color: #d50b10;
+	font-size: 24px;
+	float: left;
+	width: 150px;
+	margin-top: 20px;
+}
+
+#to_shopping_cart {
+	text-align: right;
+	float: left;
+	width: 170px;
+}
+
+#recommendations {
+	clear: both;
+	padding-top: 10px;
+}
+
+#left {
+	float: left;
+	width: 280px;
+}
+
+#right {
+	float: left;
+	width: 280px;
+	padding-left: 17px;
+}
+
+#footer {
+	text-align: center;
+}
+
+#overview {
+	width: 180px;
+	float: left;
+}
+
+.product {
+	float: left;
+	text-align: center;
+	margin: 10px;
+	border: 3px solid #666;
+}
+
+.product img {
+	width: 70px;
+}
+
+.recommendation {
+	float: left;
+	margin-right: 6px;
+}
+
+.recommendation img {
+	border: 3px solid #666;
+	width: 80px;
+}
+
+.money {
+	font-size: 16px;
+	color: #16a51a;
+	line-height: 20px;
+}
+
+.clearing {
+	clear: both;
+}
+
+.warnung {
+	color: #d50b10;
+}
+
+.green {
+	color: #16a51a;
+}
+
+td.title {
+	width: 200px;
+	padding-right: 10px;
+	text-align: right;
+	font-style: italic;
+}
+
+tr.dem_data {
+	border-bottom: 1px solid #ccc;
+}
+
+tr.dem_data td {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.small_img {
+	height: 100px;
+}
+
+.cart {
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+.cart_head {
+	text-align: center;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	border: 1px solid #ccc;
+}
+
+.cart_table {
+	border-collapse: collapse;
+}
+
+.back {
+	width: 260px;
+	float: left;
+	margin-top: 20px;
+	clear: both;
+}
+
+.kasse {
+	text-align: right;
+	width: 265px;
+	float: left;
+	margin-top: 20px;
+}
+
+.kasse a, .back a {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+}
